@@ -1,0 +1,49 @@
+<div class="layout">
+  <aside class="sidebar">
+    <button (click)="startNewChat()" class="new-chat">
+      Nuevo chat
+    </button>
+    <div class="chat-history">
+      <div
+      *ngFor="let session of sessions; let i = index"
+      class="history-item"
+      [class.selected]="i === selectedSessionIndex"
+    >
+        <span (click)="loadSession(i)">
+          {{ sessionTitles[i] || 'Chat ' + (i + 1) }}
+        </span>
+        <button class="delete-btn" (click)="deleteSession(i)"></button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="chat-container">
+    <h1>🛒 Somos Tienda Alemana</h1>
+    <h3>Preguntanos lo que quieras!</h3>
+
+    <div class="chat-window" #chatWindow>
+      <div *ngFor="let msg of messages" [ngClass]="msg.sender">
+        <div class="bubble">
+          <span *ngIf="msg.sender === 'bot'" class="bot-icon">🤖</span>
+          <span *ngIf="msg.sender === 'user'" class="user-icon">👤</span>
+          {{ msg.text }}
+        </div>
+      </div>
+      <div *ngIf="loading" class="loading-indicator">
+        El chatbot está pensando...
+      </div>
+    </div>
+
+    <form (submit)="sendQuestion()" class="input-bar">
+      <input
+        [(ngModel)]="question"
+        name="question"
+        placeholder="Escribí tu pregunta..."
+        [disabled]="loading"
+      />
+      <button type="submit" [disabled]="loading || !question.trim()">
+        {{ loading ? '...' : 'Enviar' }}
+      </button>
+    </form>
+  </div>
+</div>

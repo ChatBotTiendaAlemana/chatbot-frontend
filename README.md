@@ -1,27 +1,59 @@
-# ChatbotTiendaAlemanaFrontend
+# Chatbot Tienda Alemana Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+Este proyecto es una aplicación frontend desarrollada con [Angular](https://angular.io/) versión 17.3.3.
 
-## Development server
+## Requisitos Previos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de comenzar, asegúrate de tener instalado:
+- [Node.js](https://nodejs.org/) (versión LTS recomendada)
+- [npm](https://www.npmjs.com/) (viene incluido con Node.js)
+- [Angular CLI](https://angular.io/cli) versión 17.3.3 o superior
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clona este repositorio:
+```bash
+git clone [URL_DEL_REPOSITORIO]
+cd chatbot-tienda-alemana-frontend
+```
 
-## Build
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Desarrollo
 
-## Running unit tests
+Para iniciar el servidor de desarrollo:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm start
+# o
+ng serve
+```
 
-## Running end-to-end tests
+La aplicación estará disponible en `http://localhost:4200/`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Backend
 
-## Further help
+Este frontend requiere que el backend del Chatbot esté en ejecución para funcionar correctamente. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Asegúrate de tener el repositorio del backend clonado y configurado
+2. Inicia el servidor backend siguiendo las instrucciones en su repositorio
+3. El frontend se conectará automáticamente al backend para procesar las consultas
+
+## Funcionalidad del Chatbot
+
+El chatbot está diseñado para responder preguntas sobre la Tienda Alemana. Puedes interactuar con él de la siguiente manera:
+
+1. Escribe tu pregunta en el campo de texto del chat
+2. El chatbot procesará tu consulta y responderá de manera natural
+3. Puedes hacer preguntas sobre:
+   - Productos disponibles
+   - Precios
+   - Horarios de atención
+   - Ubicación
+   - Servicios
+   - Y más...
+
+El chatbot utiliza procesamiento de lenguaje natural para entender y responder a tus preguntas de manera conversacional.
