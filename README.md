@@ -1,4 +1,4 @@
-# Chatbot Tienda Alemana Frontend
+# 🤖 Chatbot Tienda Alemana Frontend
 
 Este proyecto es una aplicación frontend desarrollada con [Angular](https://angular.io/) versión 17.3.3.
 
@@ -13,7 +13,7 @@ Antes de comenzar, asegúrate de tener instalado:
 
 1. Clona este repositorio:
 ```bash
-git clone [URL_DEL_REPOSITORIO]
+git clone https://github.com/ChatBotTiendaAlemana/chatbot-frontend.git
 cd chatbot-tienda-alemana-frontend
 ```
 
@@ -27,14 +27,12 @@ npm install
 Para iniciar el servidor de desarrollo:
 
 ```bash
-npm start
-# o
 ng serve
 ```
 
 La aplicación estará disponible en `http://localhost:4200/`
 
-## Backend
+## 🔧 Backend
 
 Este frontend requiere que el backend del Chatbot esté en ejecución para funcionar correctamente. 
 
